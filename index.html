@@ -1,95 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steps Web Page</title>
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="main">
-        <div class="steps step1" onmouseover="animStep(0)" onmouseout="animBackStep(0)">
-            <div class="icon">
-                <ion-icon name="flame-outline"  class="class-ion-icon"></ion-icon>
-                <div class="bookmark"><p class="number">01</p></div>
-                <div class="overBookmark"></div>
+    <header>
+        <div class="logo">Пылесос.ру</div>
+        <div class="nav">
+            <a href="#">Главная</a>
+            <a href="#">Доставка</a>
+            <a href="#">Контакты</a>
+            <a href="#">О нас</a>
+        </div>
+    </header>
+    <div class="main"> 
+        <div class="background">
+            <div class="blob1"><svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <g transform="translate(168.58938217163086, -4.057441711425781)">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color: rgb(255, 95, 109);"></stop>
+                      <stop offset="100%" style="stop-color: rgb(255, 195, 113);"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#gradient)">
+                      <animate  attributeName="d"
+                          dur="10000ms"
+                          repeatCount="indefinite"
+                          values="M418.5,336.5Q423,423,336.5,423.5Q250,424,192.5,394.5Q135,365,75,307.5Q15,250,71.5,189Q128,128,189,109.5Q250,91,335.5,85Q421,79,417.5,164.5Q414,250,418.5,336.5Z;
+                          M435,318Q386,386,318,420Q250,454,181,421Q112,388,87.5,319Q63,250,82,175.5Q101,101,175.5,80.5Q250,60,309.5,95.5Q369,131,426.5,190.5Q484,250,435,318Z;
+                          M418.5,336.5Q423,423,336.5,423.5Q250,424,192.5,394.5Q135,365,75,307.5Q15,250,71.5,189Q128,128,189,109.5Q250,91,335.5,85Q421,79,417.5,164.5Q414,250,418.5,336.5Z">
+                      </animate>
+                  </path>
+                </g>
+              </svg>
             </div>
-            <div class="textarea">
-                <div class="shadow">
-                    <h2>Title here</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, eligendi molestiae quo ducimus rem facilis, numquam dolor odit dolores cum natus sunt fuga nam.
-                    </p>
+            <div class="blob2">
+                <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <g transform="translate(168.58938217163086, -4.057441711425781)">
+                      <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color: rgb(255, 95, 109);"></stop>
+                          <stop offset="100%" style="stop-color: rgb(255, 195, 113);"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#gradient)">
+                          <animate  attributeName="d"
+                              dur="10000ms"
+                              repeatCount="indefinite"
+                              values="M416.5,317.5Q385,385,317.5,417Q250,449,166,433.5Q82,418,42.5,334Q3,250,44,167.5Q85,85,167.5,45.5Q250,6,311.5,66.5Q373,127,410.5,188.5Q448,250,416.5,317.5Z;
+                              M435,336Q422,422,336,431Q250,440,180.5,414.5Q111,389,60,319.5Q9,250,53.5,174Q98,98,174,96Q250,94,311.5,110.5Q373,127,410.5,188.5Q448,250,435,336Z;
+                              M416.5,317.5Q385,385,317.5,417Q250,449,166,433.5Q82,418,42.5,334Q3,250,44,167.5Q85,85,167.5,45.5Q250,6,311.5,66.5Q373,127,410.5,188.5Q448,250,416.5,317.5Z">
+                          </animate>
+                      </path>
+                    </g>
+                  </svg>
+            </div>
+            <div class="blob3">
+                <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <g transform="translate(168.58938217163086, -4.057441711425781)">
+                      <defs>
+                        <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(163, 27, 255);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(252, 176, 69);"></stop>
+                          </linearGradient>
+                      </defs>
+                      <path fill="url(#gradient3)">
+                          <animate  attributeName="d"
+                              dur="10000ms"
+                              repeatCount="indefinite"
+                              values="M420,304.5Q359,359,304.5,402.5Q250,446,168.5,429.5Q87,413,92,331.5Q97,250,92.5,169Q88,88,169,73.5Q250,59,336.5,68Q423,77,452,163.5Q481,250,420,304.5Z;
+                              M419,335.5Q421,421,335.5,413Q250,405,191.5,386Q133,367,78,308.5Q23,250,75.5,189Q128,128,189,101.5Q250,75,337,75.5Q424,76,420.5,163Q417,250,419,335.5Z;
+                              M420.42068,330.7644Q411.5288,411.5288,330.7644,408.2644Q250,405,184.87016,392.62984Q119.74032,380.25968,71.84372,315.12984Q23.94712,250,75.5,188.52644Q127.05288,127.05288,188.52644,79.71625Q250,32.37961,336.05288,55.13693Q422.10576,77.89424,425.70916,163.94712Q429.31256,250,420.42068,330.7644Z;
+                              M420,304.5Q359,359,304.5,402.5Q250,446,168.5,429.5Q87,413,92,331.5Q97,250,92.5,169Q88,88,169,73.5Q250,59,336.5,68Q423,77,452,163.5Q481,250,420,304.5Z">
+                          </animate>
+                      </path>
+                    </g>
+                  </svg>
+            </div>
+           
+        <div class="content">
+            <div class="blocks block1">
+                <img src="pngwing.com (3).png" style="width: 400px;" alt="">
+                <div class="text">
+                    <p>Dyson DC28c</p>
+                    <p>Dyson Cinetic Big Ball</p>
+                    <p id="price">69 990₽</p>
                 </div>
             </div>
-            <div class="ending"></div>
-        </div>
-        <div class="steps step2" onmouseover="animStep(1)" onmouseout="animBackStep(1)">
-            <div class="icon">
-                <ion-icon name="settings-outline"  class="class-ion-icon"></ion-icon>
-                <div class="bookmark"><p class="number">02</p></div>
-                <div class="overBookmark"></div>
-            </div>
-            <div class="textarea">
-                <div class="shadow">
-                    <h2>Title here</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, eligendi molestiae quo ducimus rem facilis, numquam dolor odit dolores cum natus sunt fuga nam.
-                    </p>
+            <div class="blocks block2">
+                <div class="button">
+                    <p>Больше выгодных предложений...</p>
                 </div>
             </div>
-            <div class="ending"></div>
-        </div>
-        <div class="steps step3" onmouseover="animStep(2)" onmouseout="animBackStep(2)">
-            <div class="icon">
-                <ion-icon name="receipt-outline" class="class-ion-icon"></ion-icon>
-                <div class="bookmark"><p class="number">03</p></div>
-                <div class="overBookmark"></div>
-           </div>
-            <div class="textarea">
-                <div class="shadow">
-                    <h2>Title here</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, eligendi molestiae quo ducimus rem facilis, numquam dolor odit dolores cum natus sunt fuga nam.
-                    </p>
+            <div class="blocks block3">
+                <img src="1.png" style="width: 300px; margin-left: 70px;" alt="">
+                <div class="text">
+                    <p>Xiaomi WC556</p>
+                    <!-- <p>Dyson Cinetic Big Ball</p> -->
+                    <p id="price">9 990₽</p>
                 </div>
             </div>
-            <div class="ending"></div>
-        </div>
-        <div class="steps step4" onmouseover="animStep(3)" onmouseout="animBackStep(3)">
-            <div class="icon">
-                <ion-icon name="briefcase-outline"  class="class-ion-icon"></ion-icon>
-                <div class="overBookmark"></div>
-                <div class="bookmark"><p class="number">04</p></div>
-            </div>
-            <div class="textarea"> 
-                <div class="shadow">
-                    <h2>Title here</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, eligendi molestiae quo ducimus rem facilis, numquam dolor odit dolores cum natus sunt fuga nam.
-                    </p>
+            <div class="blocks block4">
+                <img src="kisspng-vacuum-cleaner-dyson-v6-animal-extra-dyson-v6-cord-dyson-5b0eb0e05b97f5.5381333115276894403752.png" style="margin-left: 52px;"alt="">
+                
+                <div class="text">
+                    <p>Dyson DC44</p>
+                    <!-- <p>Dyson Cinetic Big Ball</p> -->
+                    <p id="price">29 990₽</p>
                 </div>
             </div>
-            <div class="ending"></div>
         </div>
-        <div class="steps step5" onmouseover="animStep(4)" onmouseout="animBackStep(4)">
-            <div class="icon">
-                <ion-icon name="trophy-outline"  class="class-ion-icon"></ion-icon>
-                <div class="overBookmark"></div>
-                <div class="bookmark"><p class="number">05</p></div>
-            </div>
-            <div class="textarea">
-                <div class="shadow">
-                    <h2>Title here</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, eligendi molestiae quo ducimus rem facilis, numquam dolor odit dolores cum natus sunt fuga nam.
-                    </p>
-                </div>
-            </div>
-            <div class="ending"></div>
         </div>
-
+        
     </div>
-    <script src="script.js">
-       
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
