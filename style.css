@@ -8,7 +8,7 @@
 
 header{
     height: 72px;
-    min-width: 400px;
+    min-width: 320px;
     background: rgba(255, 255, 255, 0.356);
     position: relative;
     display: flex;
@@ -42,7 +42,7 @@ header .logo{
     padding: 5px 10px;
 }
 .nav a:hover{
-    border: 2px solid #fff;
+    outline: 2px solid #fff;
     border-radius: 20px;
 }
 .nav #cart{
@@ -81,7 +81,7 @@ header .logo{
     width: 250px;
     height: 30px;
     padding-left: 10px;
-    
+    margin-left: 20px;
 }
 .menuToggle{
     display: none;
@@ -129,7 +129,7 @@ header .logo{
     position: relative;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    min-width: 320px;
     /* margin-top: -55px; */
     /* padding: 0 100px; */
     justify-content: center;
@@ -370,10 +370,71 @@ input[type=radio] {
     filter: drop-shadow( 3px 3px 10px rgba(214, 78, 255, 0.9));
 }
 
+.mob-header{
+    display: none;
+}
 
 /* адаптивность */
+@media screen and (max-width:500px){
+    header .logo{
+        font-size: 20px !important;
+    }
 
-@media(max-width:768px){
+    header .search{
+        display: none;
+    }
+    .mob-header{
+        height: 40px;
+        min-width: 320px;
+        background: none;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        z-index: 10;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin: 10px;
+        z-index: 9;
+    }
+
+    .mob-header input{
+        height: 40px;
+        min-width: 280px;
+        width: 100%;
+        margin-right: 5px;
+        border-radius: 50px;
+        padding-left: 30px;
+        background: rgba(255, 255, 255, 0.356);
+        border: 1px solid rgba(255, 255, 255, 0.466);
+    }
+    .mob-header input:focus{
+        outline: none;
+        /* border: 1px solid rgba(255, 255, 255, 0.466); */
+        background-color: rgba(255, 255, 255, 0.731);
+        transition: 0.3s;
+    }
+    .mob-header a{
+        background-color: rgba(255, 255, 255, 0.393);
+        border: 1px solid rgba(255, 255, 255, 0.466);
+        min-width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mob-header a:hover{
+        transition: 0.3s;
+        background-color: rgba(255, 255, 255, 0.731);
+    }
+    .mob-header a ion-icon{
+        color: #fff;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:768px){
 
     header{
         padding: 30px 30px;
@@ -418,6 +479,8 @@ input[type=radio] {
     }
     .blocks{
         min-width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .blocks.block3 img{
         width: 230px; 
@@ -454,6 +517,7 @@ input[type=radio] {
 
     .menuToggle.active{
         color: black;
+        transition: 1s;
     }
 
     .menuToggle.active ion-icon:nth-child(1){
@@ -470,12 +534,10 @@ input[type=radio] {
         display: none;
     }
     .nav{
-        display: none;
-    }
-    .nav.active{
+        /* display: none; */
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100%;
         display: flex;
@@ -484,13 +546,22 @@ input[type=radio] {
         flex-direction: column;
         background: #fff;
         z-index: 10;
+        left: -100%;
+        transition: 0.3s;
+    }
+    .nav.active{
+        left: 0;
      }
-
     .nav a{
         font-size: 1.5em;
         margin-bottom: 20px;
         display: inline-block;
         color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nav a:hover{
+        outline-color: black;
     }
 
     .menuToggle ion-icon{
@@ -499,4 +570,32 @@ input[type=radio] {
         display: none;
     }
 
+}
+
+@media screen and (max-width:1040px){
+    header{
+        padding: 30px 30px;
+    }
+
+    header .logo{
+        font-size: 20px;
+    }
+
+    header .search input{
+        width: 180px;
+    }
+
+    .search a{
+        margin-left: 5px;
+    }
+
+    header .nav a{
+        font-size: 15px;
+        margin-right: 0;
+    }
+    header .nav a:hover{
+        outline: none;
+        text-decoration: underline 2px;
+
+    }
 }
