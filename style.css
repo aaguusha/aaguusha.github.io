@@ -94,7 +94,7 @@ header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 175vh;
+    height: 250vh;
     width: 100%;
     background: rgb(71, 71, 71);
     overflow: hidden;
@@ -120,7 +120,7 @@ header .logo{
     width: 900px;
     height: 900px;
     left: 20vw;
-    top: 400px;
+    top: 150vh;
     filter: drop-shadow( 3px 3px 50px rgba(214, 78, 255, 0.671));
 }
 
@@ -266,7 +266,7 @@ input[type=radio] {
 
 .content{
     width: 1000px;
-    height: 650px;
+    height: 1000px;
     /* margin-top: 70px; */
     background: none;
     position: relative;
@@ -274,7 +274,7 @@ input[type=radio] {
     float: left;
     /* margin-top: 10px; */
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-rows: 14% 14% 14% 14% 14% 15% 15%;
 }
 
 .blocks{
@@ -307,7 +307,7 @@ input[type=radio] {
 }
 .block2{
    grid-column: 1 / 4;
-   grid-row:5/6;
+   grid-row:5/8;
    /* background: rgb(187, 255, 0); */
 }
 .block3{
@@ -318,6 +318,11 @@ input[type=radio] {
 .block4{
    grid-column: 4 / 6;
    grid-row:3/6;
+   /* background: rgb(119, 0, 255); */
+}
+.block5{
+   grid-column: 4 / 6;
+   grid-row:6/8;
    /* background: rgb(119, 0, 255); */
 }
 
@@ -334,6 +339,11 @@ input[type=radio] {
     top: 50px;
     width: 200px;
 }
+.block2 .text{
+    left: 50px;
+    top: 50px;
+    width: 200px;
+}
 .block3 .text{
     left: 25px;
     bottom: 25px;
@@ -341,6 +351,10 @@ input[type=radio] {
 .block4 .text{
     left: 25px;
     top: 25px;
+}
+.block5 .text{
+    left: 25px;
+    bottom: 25px;
 }
 
 .blocks.block3 img{
@@ -352,14 +366,8 @@ input[type=radio] {
     margin-top: 4px;
 }
 
-.block2{
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    font-weight: 600;
-}
 
-.block2 .button{
+/* .block2 .button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -368,7 +376,7 @@ input[type=radio] {
     background: linear-gradient(90deg, rgba(163,27,255,1) 0%, rgba(252,176,69,1) 100%);
     border-radius: 50px;
     filter: drop-shadow( 3px 3px 10px rgba(214, 78, 255, 0.9));
-}
+} */
 
 .mob-header{
     display: none;
@@ -462,7 +470,7 @@ input[type=radio] {
     }
 
     .background{
-        height: 325vh;
+        height: 500vh;
     }
 
     .background .blob1{
@@ -475,7 +483,7 @@ input[type=radio] {
     }
     .background .blob3{
         left: 14vw;
-        top: 400px;
+        top: 100vh;
     }
     .blocks{
         min-width: 300px;
