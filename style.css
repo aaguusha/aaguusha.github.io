@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   
 }
 
 header{
@@ -100,8 +101,9 @@ header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250vh;
+    height: 100%;
     width: 100%;
+    top: -72px;
     background: rgb(71, 71, 71);
     overflow: hidden;
 }
@@ -138,7 +140,7 @@ header .logo{
     min-width: 320px;
     /* margin-top: -55px; */
     /* padding: 0 100px; */
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     /* filter: opacity(20%); */
 }
@@ -204,7 +206,7 @@ input[type=radio] {
     margin-bottom: 20px;
 }
   
- .card img {
+.card img {
      
     width: 100%;
     height: 100%;
@@ -392,7 +394,125 @@ input[type=radio] {
     display: none;
 }
 
+/* shop */
+.shop{
+    position: relative;
+}
+.animation{
+    position: relative;
+    /* background: #fff; */
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin-top: 100px;
+}
+.animation #wave{
+    stroke-dasharray: 1141;
+    animation: animate-path 5s linear ;
+    animation-fill-mode:forwards;
+    
+}
+
+.animation #vc{
+    width: 150px;
+    position: absolute;
+    right: 5vw;
+    animation: animate 5s linear;
+    animation-fill-mode:forwards;
+}
+@keyframes animate-path{
+    0%{
+        stroke-dashoffset: 0;
+    }
+
+    100%{
+        stroke-dashoffset: 1141;
+    }
+}
+@keyframes animate{
+    0%
+    {top: 0;right: 150px; transform: rotate(5deg);}
+    10%{top: -20px;right: 250px; transform: rotate(5deg);}
+    20%{top: 0;right: 350px;transform:rotate(-5deg);}
+    30%{top: -20px;right: 450px;transform: rotate(5deg);}
+    40%{top: 0;right: 550px;transform:rotate(-5deg);}
+    50%{top: -20px;right: 650px;transform:rotate(5deg);}
+    60%{top: 0;right: 750px;transform:rotate(-5deg);}
+    70%{top: -20px;right: 850px;transform: rotate(5deg);}
+    80%{top: 0;right: 950px;transform:rotate(-5deg);}
+    90%{top: -20px;right: 1050px;transform:rotate(0deg);}
+    100%{top: -20px;right: 1150px;transform:rotate(0deg);}
+}
+
+.shop{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:15px 90px 0 90px;
+    margin-bottom: 30px;
+    object-fit: cover;
+    margin-top: -55px;
+}
+
+.shop .products{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.mask{
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 111px;
+        z-index: 2;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -116px;
+        /* mix-blend-mode: screen; */
+}
+.shop h2{
+    margin-bottom: 40px;
+    margin-top: 60px;
+    font-size: 40px;
+}
+.items img{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: #fff 8px solid;
+    border-radius: 5px;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    background: rgb(215, 215, 215);
+    /* text-align: left; */
+    padding: 20px 15px 20px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 23%);
+}
 /* адаптивность */
+/* @media screen and (max-width:400px){
+    .card{
+        width: 75vw ;
+    }
+} */
 @media screen and (max-width:500px){
     header .logo{
         font-size: 20px !important;
@@ -454,7 +574,10 @@ input[type=radio] {
     .blocks.block2 img{
         margin-left: 0 ;
     }
-  
+    .card{
+        width: 80vw !important;
+    }
+
 }
 @media screen and (max-width:768px){
 
@@ -470,14 +593,28 @@ input[type=radio] {
     .slider-bl{
         min-width: 300px;
         width: 95%;
+        min-height: 150px;
+        height: 55vw;
         z-index: 9;
     }
     .container {
         min-width: 300px;
-        margin-left: 0;
+        margin-left: 8px;
+        margin-top: 10px;
     }
+
+    .card{
+        width: 90vw;
+    }
+    .card img {
+        width: auto;
+        min-height: 120px;
+        object-fit: cover;
+    }
+      
     .content{
         min-width: 300px;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -485,7 +622,8 @@ input[type=radio] {
     }
 
     .background{
-        height: 500vh;
+        height: 100%;
+        top: -132px;
     }
 
     .background .blob1{
@@ -497,8 +635,8 @@ input[type=radio] {
         top: 65%;
     }
     .background .blob3{
-        left: -16vw;
-        top: 100vh;
+        left: -40vw;
+        top: 30vh;
     }
     .blocks{
         min-width: 300px;
@@ -593,6 +731,46 @@ input[type=radio] {
         display: none;
     }
 
+    .main{
+        background: rgb(71, 71, 71);
+    }
+
+    .shop .products{
+        grid-template-columns: 50% 50%;
+        grid-template-rows:50% 50%;
+    }
+
+    
+    .shop{
+        height: 100%;
+    }
+
+    .shop .products{
+        margin-bottom: 50px;
+        min-width: 300px;
+    }
+
+    .animation #wave{
+        min-width: 300px;
+    }
+
+    .mask{
+        min-width: 300px;
+    }
+    @keyframes animate{
+        0%
+        {top: 0;right: -16vw; transform: rotate(5deg);}
+        10%{top: -20px;right: -6vw; transform: rotate(5deg);}
+        20%{top: 0;right: 4vw;transform:rotate(-5deg);}
+        30%{top: -20px;right: 14vw;transform: rotate(5deg);}
+        40%{top: 0;right: 24vw;transform:rotate(-5deg);}
+        50%{top: -20px;right: 34vw;transform:rotate(5deg);}
+        60%{top: 0;right: 44vw;transform:rotate(-5deg);}
+        70%{top: -20px;right: 54vw;transform: rotate(5deg);}
+        80%{top: 0;right: 64vw;transform:rotate(-5deg);}
+        90%{top: -20px;right: 74vw;transform:rotate(0deg);}
+        100%{top: -20px;right: 80vw;transform:rotate(0deg);}
+    }
 }
 
 @media screen and (max-width:1040px){
@@ -621,4 +799,5 @@ input[type=radio] {
         text-decoration: underline 2px;
 
     }
+    
 }
