@@ -83,6 +83,12 @@ header .logo{
     padding-left: 10px;
     margin-left: 20px;
 }
+
+.search input:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.731);
+    transition: 0.3s;
+}
 .menuToggle{
     display: none;
 }
@@ -361,6 +367,10 @@ input[type=radio] {
     width: 300px; margin-left: 70px;
 }
 
+.blocks .block2 img{
+    margin-left: 110px;
+}
+
 #price{
     font-weight: 700;
     margin-top: 4px;
@@ -441,9 +451,14 @@ input[type=radio] {
         color: #fff;
         font-size: 25px;
     }
+    .blocks.block2 img{
+        margin-left: 0 ;
+    }
+  
 }
 @media screen and (max-width:768px){
 
+    
     header{
         padding: 30px 30px;
         justify-content: right;
@@ -482,7 +497,7 @@ input[type=radio] {
         top: 65%;
     }
     .background .blob3{
-        left: 14vw;
+        left: -16vw;
         top: 100vh;
     }
     .blocks{
