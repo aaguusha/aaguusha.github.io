@@ -411,18 +411,31 @@ input[type=radio] {
 }
 .animation #wave{
     stroke-dasharray: 1141;
-    animation: animate-path 5s linear ;
+    animation: animate-path 6s linear;
     animation-fill-mode:forwards;
-    
+    animation-play-state: paused;
 }
 
 .animation #vc{
     width: 150px;
     position: absolute;
     right: 5vw;
+    animation: animate 6s linear;
+    animation-fill-mode:forwards;
+    animation-play-state: paused;
+}
+.animation[data-scroll="in"] #wave{
+    animation-play-state: running;
+}
+.animation[data-scroll="in"] #vc{
+    animation-play-state: running;
+}
+
+/* .animation #vc[data-scroll="in"]{
     animation: animate 5s linear;
     animation-fill-mode:forwards;
-}
+} */
+
 @keyframes animate-path{
     0%{
         stroke-dashoffset: 0;
@@ -451,13 +464,13 @@ input[type=radio] {
     position: relative;
     background: #fff;
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding:15px 90px 0 90px;
-    margin-bottom: 30px;
+    padding-bottom: 80px;
     object-fit: cover;
     margin-top: -55px;
 }
@@ -467,6 +480,10 @@ input[type=radio] {
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+.shop .products .items:hover{
+    padding: 10px 15px 10px 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.297);
+}
 .mask{
         /* position: absolute; */
         top: 0;
@@ -495,7 +512,7 @@ input[type=radio] {
     border-radius: 5px;
 }
 
-.items{
+.shop .products .items{
     display: flex;
     flex-direction: column;
     /* align-items: center;
@@ -506,13 +523,57 @@ input[type=radio] {
     margin: 10px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(0 0 0 / 23%);
+    transition: 0.5s;
 }
-/* адаптивность */
-/* @media screen and (max-width:400px){
-    .card{
-        width: 75vw ;
-    }
-} */
+
+.footer{
+    width: 100%;
+    height: 350px;
+    background: rgb(71,71,71);
+    z-index: 2;
+    
+}
+
+.footer .contacts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.footer .social li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.footer .social li a{
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 5px;
+    height: 30px;
+    color: #fff;
+
+}
+.footer .social li a ion-icon{
+    font-size: 30px;
+    /* margin-top: 15px; */
+}
+.footer .contacts .social #media{
+    display: none;
+}
+.footer .social li a:nth-child(2):hover{
+    text-decoration: underline;
+}
+
+.footer .trademark{
+    width: 100%;
+    color: rgb(162, 162, 162);
+    text-align: center;
+}
 @media screen and (max-width:500px){
     header .logo{
         font-size: 20px !important;
@@ -738,6 +799,7 @@ input[type=radio] {
     .shop .products{
         grid-template-columns: 50% 50%;
         grid-template-rows:50% 50%;
+        height: 700px;
     }
 
     
@@ -770,6 +832,22 @@ input[type=radio] {
         80%{top: 0;right: 64vw;transform:rotate(-5deg);}
         90%{top: -20px;right: 74vw;transform:rotate(0deg);}
         100%{top: -20px;right: 80vw;transform:rotate(0deg);}
+    }
+
+    .footer{
+        height: 300px;
+    }
+    .footer .contacts .map{
+        display: none;
+    }
+    .footer .contacts .social #media{
+        display: inherit;
+        display: flex;
+        align-items: center; 
+    }
+    .footer .trademark{
+        margin-top: 15px;
+        font-size: 15px;
     }
 }
 
